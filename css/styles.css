@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(162, 113, 207, 0.691);  
+}
+
+ol{
+    font-size: 25px;
+}
+
+.personajes{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 15px 15px 15px 15px;
+    height: 650px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.personaje{
+    background-color: rgba(122, 230, 194, 0.787);
+    margin:  15px 15px 15px 15px;
+    padding: 15px 15px 15px 15px;
+    max-width: 150px;
+    
+}
+
+#Shrek{
+    order: 1;
+}
+
+#fiona{
+    order: -1;
+    align-items: stretch;
+}
+
+
+#gato{
+    order: -1;
+    align-self: end;
+}
+
+#pinocho{
+    align-self:self-start;
+}
+
+.personaje img{
+    height: 100px;
+}
+
