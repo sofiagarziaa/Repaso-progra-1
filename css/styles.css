@@ -1,53 +1,112 @@
-*{
-    box-sizing: border-box;
-}
-
-body{
-    background-color: rgba(162, 113, 207, 0.691);  
-}
-
-ol{
-    font-size: 25px;
-}
-
-.personajes{
+/* Estilo de la cabecera */
+.header {
+    width: 100%;
+    height: 150px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    margin-bottom: 15px;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 15px 15px 15px 15px;
-    height: 650px;
+    justify-content: center;
     align-items: center;
+}
+
+/* Estilo del contenedor principal */
+main {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo de la sección */
+.container {
+    display: flex;
+    max-width: 1200px;
+    border: 2px solid #000;
     justify-content: space-between;
+    width: 100%;
+    padding-top: 10px;
 }
 
-.personaje{
-    background-color: rgba(122, 230, 194, 0.787);
-    margin:  15px 15px 15px 15px;
-    padding: 15px 15px 15px 15px;
-    max-width: 150px;
-    
+/* Estilo de las cajas */
+.box {
+    height: 50vh; /* Ocupa la mitad del viewport de altura */
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-#Shrek{
-    order: 1;
+/* Especificaciones de cada caja */
+.box-a {
+    width: 20%; /* Aproximadamente 250px */
+    background-color: lightcoral;
+    border: 2px solid darkred;
 }
 
-#fiona{
-    order: -1;
-    align-items: stretch;
+.box-b {
+    width: 60%; /* Aproximadamente 800px */
+    background-color: lightgreen;
+    border: 2px solid darkgreen;
+    margin: 0 5%; /* 25px de margen izquierdo y derecho */
 }
 
-
-#gato{
-    order: -1;
-    align-self: end;
+.box-c {
+    width: 10%; /* Aproximadamente 100px */
+    background-color: lightblue;
+    border: 2px solid darkblue;
 }
 
-#pinocho{
-    align-self:self-start;
+/* Media Queries para resoluciones iguales o inferiores a 900px */
+@media (max-width: 900px) {
+    .container {
+        padding: 20px; /* 20px de relleno en todos los lados */
+        width: 95%; /* 95% del ancho de la pantalla */
+        flex-direction: column; /* Disposición en columna */
+        align-items: center; /* Centra los elementos en la columna */
+    }
+
+    .box {
+        height: 100px; /* Altura de 100px para las cajas */
+    }
+
+    .box-a, .box-b, .box-c {
+        margin: 0; /* Elimina los márgenes */
+        border: 2px solid black; /* Aseguramos bordes visibles */
+    }
+
+    .box-a {
+        width: 40%; /* 40% del contenedor */
+        background-color: lightcoral;
+    }
+
+    .box-b {
+        width: 55%; /* 55% del contenedor */
+        background-color: lightgreen;
+    }
+
+    .box-c {
+        width: 100%; /* 100% del contenedor */
+        background-color: lightblue;
+        margin-top: 10px; /* Espacio superior para separación */
+    }
 }
 
-.personaje img{
-    height: 100px;
+/* Media Queries para resoluciones iguales o inferiores a 450px */
+@media (max-width: 450px) {
+    .container {
+        padding: 0; /* Sin relleno */
+        width: 100%; /* 100% del ancho de la pantalla */
+        flex-direction: column; /* Organización en columna */
+    }
+
+    .box {
+        height: 20vh; /* Cada caja ocupa un quinto de la altura de la pantalla */
+        width: 100%; /* 100% del ancho del contenedor */
+        margin: 0; /* Elimina cualquier margen */
+    }
+
+    .box-a, .box-b, .box-c {
+        border: 2px solid black; /* Aseguramos bordes visibles */
+    }
 }
 
